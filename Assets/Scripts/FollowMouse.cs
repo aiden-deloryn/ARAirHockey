@@ -21,6 +21,6 @@ public class FollowMouse : MonoBehaviour {
 	void OnCollisionEnter(Collision other) {
 		Debug.Log ("Collision!");
 		//other.gameObject.GetComponent<Rigidbody> ().AddForce (Vector3.forward);
-		other.gameObject.GetComponent<Rigidbody> ().AddForce ((other.gameObject.transform.position - this.gameObject.transform.position) * 5);
+		other.gameObject.GetComponent<Rigidbody> ().AddForce ((other.gameObject.transform.position - this.gameObject.transform.position) * 10);
 	}
 }
