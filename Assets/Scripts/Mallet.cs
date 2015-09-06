@@ -15,6 +15,8 @@ public class Mallet : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision other) {
-		other.gameObject.GetComponent<Rigidbody> ().AddForce ((other.gameObject.transform.position - this.gameObject.transform.position) * collisionForce);
+		if(MultiTags.GameObjectHasTag(other.gameObject, Tag.Puck)) {
+			other.gameObject.GetComponent<Rigidbody> ().AddForce ((other.gameObject.transform.position - this.gameObject.transform.position) * collisionForce);
+		}
 	}
 }
