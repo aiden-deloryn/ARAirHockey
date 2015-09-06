@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: .211999997, g: .226999998, b: .259000003, a: 1}
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: .5
@@ -87,21 +87,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &206443952 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 140780, guid: 5e4eeab423eaf43c3883346f389ee41d, type: 2}
-  m_PrefabInternal: {fileID: 291256642}
---- !u!114 &206443953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 206443952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5daa51a6bdfb4140b5320bb7bfd18f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &259172441
 Prefab:
   m_ObjectHideFlags: 0
@@ -199,7 +184,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407426, guid: cc85a2d0e0fc34310a19d470abd7cbaf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .356000006
+      value: .128999993
       objectReference: {fileID: 0}
     - target: {fileID: 407426, guid: cc85a2d0e0fc34310a19d470abd7cbaf, type: 2}
       propertyPath: m_LocalPosition.z
@@ -250,7 +235,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 887380358}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -345,10 +330,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: .300000012
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 1.10000002
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

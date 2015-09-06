@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11406804}
   - 54: {fileID: 5420762}
   - 135: {fileID: 13549466}
+  - 114: {fileID: 11414838}
   m_Layer: 0
   m_Name: Mallet
   m_TagString: Untagged
@@ -87,6 +88,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc188cd081c434ddb8295aafd3167d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11414838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5daa51a6bdfb4140b5320bb7bfd18f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &13549466
