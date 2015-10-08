@@ -1,0 +1,15 @@
+{
+"scripts":{
+   "start": "node server.js"	
+},
+
+"main": "server.js",
+
+"dependencies" :
+  { "express" : "*"
+  , "mysql" : "*"
+  , "multer" : "*"
+  , "body-parser" : "*"
+  , "socket.io" : "*"
+  }
+}
