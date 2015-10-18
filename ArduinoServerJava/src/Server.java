@@ -64,6 +64,7 @@ public class Server {
 			StringBuilder response = new StringBuilder();
 			Map<String, String> parms = Server.queryToMap(t.getRequestURI()
 					.getQuery());
+			
 			if (!game.doesPlayerExist(parms.get("id"))) {
 				// NEW PLAYER:
 				game.addPlayer(new Player(500, 500, puckSize, parms.get("id"),
@@ -78,7 +79,7 @@ public class Server {
 			} catch (Exception e) {
 				System.out.println("Failed to move player: " + parms.get("id"));
 			}
-			Server.writeResponse(t, "Success");
+			Server.writeResponse(t, "playerColour=" + game.findPlayerById(parms.get("id")).colorName);
 		}
 	}
 

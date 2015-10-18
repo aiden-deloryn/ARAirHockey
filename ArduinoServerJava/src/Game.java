@@ -70,7 +70,7 @@ public class Game implements Runnable {
 
 		canvas.requestFocus();
 
-		players = new ArrayList<>();
+		players = new ArrayList<Player>();
 		puck = new Puck(gameWidth / 2, gameHeight / 2,
 				(int) (Server.puckSize * 0.75), "resources/Puck.png",
 				Color.WHITE);
