@@ -3,6 +3,7 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.geom.Rectangle2D;
+import java.util.Random;
 
 import javax.swing.ImageIcon;
 
@@ -12,6 +13,7 @@ public class Player extends Puck {
 	public Image gImg;
 	public int score;
 	public String colorName;
+	public Debuf activeDebuf = Debuf.INVERSION;
 
 	public Player(float x, float y, int radius, String id, String src,
 			Color color, String gSrc) {
@@ -60,8 +62,38 @@ public class Player extends Puck {
 	public void update(float delta) {
 		float oldX = x;
 		float oldY = y;
-		this.x += xMov * delta;
-		this.y += yMov * delta;
+		
+		switch(activeDebuf) {
+		case INVERSION:
+			this.x += (xMov * -1) * delta;
+			this.y += (yMov * -1) * delta;
+			break;
+		case SPEED_INHIBITOR:
+			this.x += (xMov * 0.3) * delta;
+			this.y += (yMov * 0.3) * delta;
+			break;
+		case DISRUPTION:
+			Random rand = new Random();
+			int min = 0;
+			int max = 8;
+			int randomNum = rand.nextInt((max - min) + 1) + min;
+			
+			if (randomNum == 0) {
+				// cause disruption
+				this.x += (yMov * 3) * delta;
+				this.y += (xMov * 3) * delta;
+			} else {
+				// don't cause disruption
+				this.x += xMov * delta;
+				this.y += yMov * delta;
+			}
+			
+			break;
+		default:
+			this.x += xMov * delta;
+			this.y += yMov * delta;
+		}
+		
 		// COLLISION CHECKING:
 		if (this.x <= 0 || this.x >= Game.gameWidth) {
 			x = oldX;

@@ -1,0 +1,7 @@
+
+public enum Debuf {
+	NONE,
+	INVERSION,
+	SPEED_INHIBITOR,
+	DISRUPTION
+}

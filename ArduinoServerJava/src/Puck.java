@@ -78,6 +78,11 @@ public class Puck {
 		savePos();
 		xMov = other.xMov * 2;
 		yMov = other.yMov * 2;
+		
+		if (other.activeDebuf == Debuf.INVERSION) {
+			xMov *= -1;
+			yMov *= -1;
+		}
 	}
 
 	public boolean hasCollision(Puck other) {
