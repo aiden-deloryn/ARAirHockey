@@ -31,6 +31,7 @@ public class Server {
 		// START GAME:
 		uniqueID = 0;
 		game = new Game();
+		Sound.play("Soundtrack", true);
 	}
 
 	static class HomePage implements HttpHandler {

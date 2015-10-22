@@ -48,6 +48,7 @@ public class Game implements Runnable {
 	BufferStrategy bufferStrategy;
 
 	public Game() {
+		
 		frame = new JFrame("Basic Game");
 
 		bigFont = new Font("TimesRoman", Font.PLAIN, gameHeight / 10);
@@ -90,7 +91,7 @@ public class Game implements Runnable {
 	boolean running = true;
 
 	public void run() {
-
+		
 		long beginLoopTime;
 		long endLoopTime;
 		long currentUpdateTime = System.nanoTime();
@@ -236,10 +237,10 @@ public class Game implements Runnable {
 			return;
 
 		Random rand = new Random();
-		int minX = 0;
-		int maxX = gameWidth;
-		int minY = 0;
-		int maxY = gameHeight;
+		int minX = 50;
+		int maxX = gameWidth - 50;
+		int minY = 50;
+		int maxY = gameHeight - 50;
 
 		int randomX = rand.nextInt((maxX - minX) + 1) + minX;
 		int randomY = rand.nextInt((maxY - minY) + 1) + minY;
