@@ -24,9 +24,10 @@ public class Game implements Runnable {
 
 	// GAME VALUES:
 	public ArrayList<Player> players;
+	public static ArrayList<Particle> particles;
 	public Pickup spawnedPickup;
 	public Puck puck;
-	public static final int goalLength = gameHeight / 3;
+	public static final int goalLength = gameHeight / 6;
 	public static final int goalWidth = goalLength / 4;
 	public static String wonText = "";
 
@@ -78,6 +79,7 @@ public class Game implements Runnable {
 		puck = new Puck(gameWidth / 2, gameHeight / 2,
 				(int) (Server.puckSize * 0.75), "resources/Puck.png",
 				Color.WHITE);
+		particles = new ArrayList<Particle>();
 
 		new Thread(this).start();
 	}
@@ -135,8 +137,10 @@ public class Game implements Runnable {
 			if (player.hasCollision(puck)) {
 				puckCollided = true;
 				puck.colliderCount += 1;
+				startParticles(100, (int) puck.x, (int) puck.y);
 				Sound.play("HitSound", false);
 				puck.getPushed(player);
+				puck.radiusMult = 2.0f;
 				if (puck.colliderCount >= 2) {
 					puck.xMov *= -1;
 					puck.yMov *= -1;
@@ -145,7 +149,7 @@ public class Game implements Runnable {
 				puck.x = oldX + puck.xMov;
 				puck.y = oldY + puck.yMov;
 			}
-			
+
 			if (spawnedPickup != null && player.hasCollision(spawnedPickup)) {
 				applyDebufToOpponents(player);
 				spawnedPickup = null;
@@ -153,9 +157,9 @@ public class Game implements Runnable {
 
 			if (!gameOver && player.goal.getBounds2D().contains(puck.x, puck.y)) {
 				Sound.play("ScoreSound", false);
-				
+
 				resetDebufs();
-				
+
 				if (player.index != puck.lastHitIndex) {
 					players.get(puck.lastHitIndex).score += 1;
 					if (players.get(puck.lastHitIndex).score >= maxPoints) {
@@ -189,18 +193,24 @@ public class Game implements Runnable {
 			pickupSpawnCounter -= 1;
 			if (pickupSpawnCounter < 0) {
 				spawnPickup();
-				
+
 				pickupSpawnCounter = pickupSpawnTimer;
 			}
 		}
+
+		// PARTICLE:
+		for (int i = 0; i <= particles.size() - 1; i++) {
+			if (particles.get(i).update(deltaTime))
+				particles.remove(i);
+		}
 	}
-	
+
 	public void applyDebufToOpponents(Player safePlayer) {
 		for (Player player : players) {
 			if (player != safePlayer) {
 				player.activeDebuf = spawnedPickup.effect;
-				
-				switch(spawnedPickup.effect) {
+
+				switch (spawnedPickup.effect) {
 				case DISRUPTION:
 					Sound.play("DisruptionActivated", false);
 					break;
@@ -214,44 +224,52 @@ public class Game implements Runnable {
 			}
 		}
 	}
-	
+
 	public void resetDebufs() {
-		for(Player player : players) {
+		for (Player player : players) {
 			player.activeDebuf = Debuf.NONE;
 		}
 	}
-	
+
 	public void spawnPickup() {
-		if (spawnedPickup != null || debufIsActive() || gameOver) return;
-		
+		if (spawnedPickup != null || debufIsActive() || gameOver)
+			return;
+
 		Random rand = new Random();
 		int minX = 0;
 		int maxX = gameWidth;
 		int minY = 0;
 		int maxY = gameHeight;
-		
+
 		int randomX = rand.nextInt((maxX - minX) + 1) + minX;
 		int randomY = rand.nextInt((maxY - minY) + 1) + minY;
 		int randomPickup = rand.nextInt(3);
 		Pickup pickup;
-		
+
 		if (randomPickup == 0) {
 			// spawn AXIS_SWITCH
-			pickup = new Pickup(Debuf.INVERSION, randomX, randomY, (int) (Server.puckSize * 0.75), "resources/AxisSwitchNeon.png", Color.ORANGE);
+			pickup = new Pickup(Debuf.INVERSION, randomX, randomY,
+					(int) (Server.puckSize * 0.75),
+					"resources/AxisSwitchNeon.png", Color.ORANGE);
 		} else if (randomPickup == 1) {
 			// spawn SLOW_SPEED
-			pickup = new Pickup(Debuf.SPEED_INHIBITOR, randomX, randomY, (int) (Server.puckSize * 0.75), "resources/SlowSpeedNeon.png", Color.ORANGE);
+			pickup = new Pickup(Debuf.SPEED_INHIBITOR, randomX, randomY,
+					(int) (Server.puckSize * 0.75),
+					"resources/SlowSpeedNeon.png", Color.ORANGE);
 		} else {
 			// spawn DISRUPTION
-			pickup = new Pickup(Debuf.DISRUPTION, randomX, randomY, (int) (Server.puckSize * 0.75), "resources/DisruptNeon.png", Color.ORANGE);
+			pickup = new Pickup(Debuf.DISRUPTION, randomX, randomY,
+					(int) (Server.puckSize * 0.75),
+					"resources/DisruptNeon.png", Color.ORANGE);
 		}
-		
+
 		spawnedPickup = pickup;
 	}
-	
+
 	public boolean debufIsActive() {
 		for (Player player : players) {
-			if (player.activeDebuf != Debuf.NONE) return true;
+			if (player.activeDebuf != Debuf.NONE)
+				return true;
 		}
 		return false;
 	}
@@ -290,10 +308,29 @@ public class Game implements Runnable {
 		return null;
 	}
 
+	public static void startParticles(int amount, int x, int y) {
+		for (int i = 0; i < amount; ++i) {
+			addParticle(x, y);
+		}
+	}
+
+	public static void addParticle(int x, int y) {
+		float dx, dy;
+		dx = (Util.randFloat(-1, 1));
+		dy = (Util.randFloat(-1, 1));
+		int size = (int) (Math.random() * 10);
+		particles.add(new Particle(x, y, dx, dy, size, Color.white));
+	}
+
 	protected void render(Graphics2D g) {
 		g.setColor(Color.BLACK);
 		g.setFont(smallFont);
 		g.fillRect(0, 0, gameWidth, gameHeight);
+
+		for (int i = 0; i <= particles.size() - 1; i++) {
+			particles.get(i).render(g);
+		}
+
 		try {
 			for (Player player : players) {
 				player.render(g);

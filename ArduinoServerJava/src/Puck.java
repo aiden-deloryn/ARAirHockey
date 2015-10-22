@@ -9,6 +9,8 @@ import javax.swing.ImageIcon;
 
 public class Puck {
 	public float radius;
+	public float renderRadius;
+	public float radiusMult;
 	public float x, y;
 	public float spawnX, spawnY;
 	public float xMov, yMov;
@@ -26,6 +28,7 @@ public class Puck {
 		spawnX = x;
 		spawnY = y;
 		this.radius = radius;
+		this.renderRadius = radius;
 		try {
 			img = new ImageIcon(src).getImage();
 		} catch (Exception e) {
@@ -36,6 +39,16 @@ public class Puck {
 	}
 
 	public void update(float delta) {
+		// ANIM:
+		if (radiusMult > 1) {
+			radiusMult -= (delta / 100);
+			if (radiusMult <= 1)
+				radiusMult = 1;
+		} else {
+			radiusMult = 1;
+		}
+		renderRadius = radius * radiusMult;
+
 		savePos();
 		x += xMov * delta;
 		y += yMov * delta;
@@ -66,11 +79,15 @@ public class Puck {
 			xMov *= -1;
 			x = oldX;
 			Sound.play("HitSound", false);
+			Game.startParticles(100, (int) x, (int) y);
+			radiusMult = 2.0f;
 		}
 		if (this.y <= 0 || this.y >= Game.gameHeight) {
 			yMov *= -1;
 			y = oldY;
 			Sound.play("HitSound", false);
+			Game.startParticles(100, (int) x, (int) y);
+			radiusMult = 2.0f;
 		}
 	}
 
@@ -78,7 +95,7 @@ public class Puck {
 		savePos();
 		xMov = other.xMov * 2;
 		yMov = other.yMov * 2;
-		
+
 		if (other.activeDebuf == Debuf.INVERSION) {
 			xMov *= -1;
 			yMov *= -1;
@@ -97,8 +114,9 @@ public class Puck {
 
 	public void render(Graphics2D g) {
 		g.setColor(color);
-		g.drawImage(img, (int) (x - (radius / 2)), (int) (y - (radius / 2)),
-				(int) radius * 2, (int) radius * 2, null);
+		g.drawImage(img, (int) (x - (renderRadius / 2)),
+				(int) (y - (renderRadius / 2)), (int) renderRadius * 2,
+				(int) renderRadius * 2, null);
 	}
 
 	public void savePos() {
