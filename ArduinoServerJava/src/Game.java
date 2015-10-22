@@ -35,10 +35,10 @@ public class Game implements Runnable {
 	public Font smallFont;
 
 	// WIN CONDITION:
-	public int maxPoints = 5;
+	public int maxPoints = 10;
 	public int gameOverTimer = 500;
 	public int gameOverCounter = gameOverTimer;
-	public int pickupSpawnTimer = 500;
+	public int pickupSpawnTimer = 300;
 	public int pickupSpawnCounter = pickupSpawnTimer;
 	boolean gameOver = false;
 

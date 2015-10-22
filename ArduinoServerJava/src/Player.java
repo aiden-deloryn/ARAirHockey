@@ -13,7 +13,7 @@ public class Player extends Puck {
 	public Image gImg;
 	public int score;
 	public String colorName;
-	public Debuf activeDebuf = Debuf.INVERSION;
+	public Debuf activeDebuf = Debuf.NONE;
 
 	public Player(float x, float y, int radius, String id, String src,
 			Color color, String gSrc) {
