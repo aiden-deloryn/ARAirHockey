@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF310F391BC3437100FF8D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF310F381BC3437100FF8D6E /* AppDelegate.swift */; };
+		DF310F3B1BC3437100FF8D6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF310F3A1BC3437100FF8D6E /* ViewController.swift */; };
+		DF310F3E1BC3437100FF8D6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF310F3C1BC3437100FF8D6E /* Main.storyboard */; };
+		DF310F401BC3437100FF8D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF310F3F1BC3437100FF8D6E /* Assets.xcassets */; };
+		DF310F431BC3437100FF8D6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF310F411BC3437100FF8D6E /* LaunchScreen.storyboard */; };
+		DF310F4E1BC3437100FF8D6E /* ARHockeyMalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF310F4D1BC3437100FF8D6E /* ARHockeyMalletTests.swift */; };
+		DF310F591BC3437100FF8D6E /* ARHockeyMalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF310F581BC3437100FF8D6E /* ARHockeyMalletUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF310F4A1BC3437100FF8D6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF310F2D1BC3437100FF8D6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF310F341BC3437100FF8D6E;
+			remoteInfo = ARHockeyMallet;
+		};
+		DF310F551BC3437100FF8D6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF310F2D1BC3437100FF8D6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF310F341BC3437100FF8D6E;
+			remoteInfo = ARHockeyMallet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF310F351BC3437100FF8D6E /* ARHockeyMallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARHockeyMallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF310F381BC3437100FF8D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DF310F3A1BC3437100FF8D6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF310F3D1BC3437100FF8D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF310F3F1BC3437100FF8D6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF310F421BC3437100FF8D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF310F441BC3437100FF8D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF310F491BC3437100FF8D6E /* ARHockeyMalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARHockeyMalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF310F4D1BC3437100FF8D6E /* ARHockeyMalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARHockeyMalletTests.swift; sourceTree = "<group>"; };
+		DF310F4F1BC3437100FF8D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF310F541BC3437100FF8D6E /* ARHockeyMalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARHockeyMalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF310F581BC3437100FF8D6E /* ARHockeyMalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARHockeyMalletUITests.swift; sourceTree = "<group>"; };
+		DF310F5A1BC3437100FF8D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF310F321BC3437100FF8D6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF310F461BC3437100FF8D6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF310F511BC3437100FF8D6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF310F2C1BC3437100FF8D6E = {
+			isa = PBXGroup;
+			children = (
+				DF310F371BC3437100FF8D6E /* ARHockeyMallet */,
+				DF310F4C1BC3437100FF8D6E /* ARHockeyMalletTests */,
+				DF310F571BC3437100FF8D6E /* ARHockeyMalletUITests */,
+				DF310F361BC3437100FF8D6E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF310F361BC3437100FF8D6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF310F351BC3437100FF8D6E /* ARHockeyMallet.app */,
+				DF310F491BC3437100FF8D6E /* ARHockeyMalletTests.xctest */,
+				DF310F541BC3437100FF8D6E /* ARHockeyMalletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF310F371BC3437100FF8D6E /* ARHockeyMallet */ = {
+			isa = PBXGroup;
+			children = (
+				DF310F381BC3437100FF8D6E /* AppDelegate.swift */,
+				DF310F3A1BC3437100FF8D6E /* ViewController.swift */,
+				DF310F3C1BC3437100FF8D6E /* Main.storyboard */,
+				DF310F3F1BC3437100FF8D6E /* Assets.xcassets */,
+				DF310F411BC3437100FF8D6E /* LaunchScreen.storyboard */,
+				DF310F441BC3437100FF8D6E /* Info.plist */,
+			);
+			path = ARHockeyMallet;
+			sourceTree = "<group>";
+		};
+		DF310F4C1BC3437100FF8D6E /* ARHockeyMalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF310F4D1BC3437100FF8D6E /* ARHockeyMalletTests.swift */,
+				DF310F4F1BC3437100FF8D6E /* Info.plist */,
+			);
+			path = ARHockeyMalletTests;
+			sourceTree = "<group>";
+		};
+		DF310F571BC3437100FF8D6E /* ARHockeyMalletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DF310F581BC3437100FF8D6E /* ARHockeyMalletUITests.swift */,
+				DF310F5A1BC3437100FF8D6E /* Info.plist */,
+			);
+			path = ARHockeyMalletUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF310F341BC3437100FF8D6E /* ARHockeyMallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF310F5D1BC3437100FF8D6E /* Build configuration list for PBXNativeTarget "ARHockeyMallet" */;
+			buildPhases = (
+				DF310F311BC3437100FF8D6E /* Sources */,
+				DF310F321BC3437100FF8D6E /* Frameworks */,
+				DF310F331BC3437100FF8D6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARHockeyMallet;
+			productName = ARHockeyMallet;
+			productReference = DF310F351BC3437100FF8D6E /* ARHockeyMallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF310F481BC3437100FF8D6E /* ARHockeyMalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF310F601BC3437100FF8D6E /* Build configuration list for PBXNativeTarget "ARHockeyMalletTests" */;
+			buildPhases = (
+				DF310F451BC3437100FF8D6E /* Sources */,
+				DF310F461BC3437100FF8D6E /* Frameworks */,
+				DF310F471BC3437100FF8D6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF310F4B1BC3437100FF8D6E /* PBXTargetDependency */,
+			);
+			name = ARHockeyMalletTests;
+			productName = ARHockeyMalletTests;
+			productReference = DF310F491BC3437100FF8D6E /* ARHockeyMalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DF310F531BC3437100FF8D6E /* ARHockeyMalletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF310F631BC3437100FF8D6E /* Build configuration list for PBXNativeTarget "ARHockeyMalletUITests" */;
+			buildPhases = (
+				DF310F501BC3437100FF8D6E /* Sources */,
+				DF310F511BC3437100FF8D6E /* Frameworks */,
+				DF310F521BC3437100FF8D6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF310F561BC3437100FF8D6E /* PBXTargetDependency */,
+			);
+			name = ARHockeyMalletUITests;
+			productName = ARHockeyMalletUITests;
+			productReference = DF310F541BC3437100FF8D6E /* ARHockeyMalletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF310F2D1BC3437100FF8D6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Aiden De Loryn";
+				TargetAttributes = {
+					DF310F341BC3437100FF8D6E = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = FUBQ7MZ53W;
+					};
+					DF310F481BC3437100FF8D6E = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = DF310F341BC3437100FF8D6E;
+					};
+					DF310F531BC3437100FF8D6E = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = DF310F341BC3437100FF8D6E;
+					};
+				};
+			};
+			buildConfigurationList = DF310F301BC3437100FF8D6E /* Build configuration list for PBXProject "ARHockeyMallet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF310F2C1BC3437100FF8D6E;
+			productRefGroup = DF310F361BC3437100FF8D6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF310F341BC3437100FF8D6E /* ARHockeyMallet */,
+				DF310F481BC3437100FF8D6E /* ARHockeyMalletTests */,
+				DF310F531BC3437100FF8D6E /* ARHockeyMalletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF310F331BC3437100FF8D6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF310F431BC3437100FF8D6E /* LaunchScreen.storyboard in Resources */,
+				DF310F401BC3437100FF8D6E /* Assets.xcassets in Resources */,
+				DF310F3E1BC3437100FF8D6E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF310F471BC3437100FF8D6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF310F521BC3437100FF8D6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF310F311BC3437100FF8D6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF310F3B1BC3437100FF8D6E /* ViewController.swift in Sources */,
+				DF310F391BC3437100FF8D6E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF310F451BC3437100FF8D6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF310F4E1BC3437100FF8D6E /* ARHockeyMalletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF310F501BC3437100FF8D6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF310F591BC3437100FF8D6E /* ARHockeyMalletUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF310F4B1BC3437100FF8D6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF310F341BC3437100FF8D6E /* ARHockeyMallet */;
+			targetProxy = DF310F4A1BC3437100FF8D6E /* PBXContainerItemProxy */;
+		};
+		DF310F561BC3437100FF8D6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF310F341BC3437100FF8D6E /* ARHockeyMallet */;
+			targetProxy = DF310F551BC3437100FF8D6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF310F3C1BC3437100FF8D6E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF310F3D1BC3437100FF8D6E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DF310F411BC3437100FF8D6E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF310F421BC3437100FF8D6E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF310F5B1BC3437100FF8D6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF310F5C1BC3437100FF8D6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF310F5E1BC3437100FF8D6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ARHockeyMallet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aidendeloryn.ARHockeyMallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		DF310F5F1BC3437100FF8D6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ARHockeyMallet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aidendeloryn.ARHockeyMallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		DF310F611BC3437100FF8D6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ARHockeyMalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aidendeloryn.ARHockeyMalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARHockeyMallet.app/ARHockeyMallet";
+			};
+			name = Debug;
+		};
+		DF310F621BC3437100FF8D6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ARHockeyMalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aidendeloryn.ARHockeyMalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARHockeyMallet.app/ARHockeyMallet";
+			};
+			name = Release;
+		};
+		DF310F641BC3437100FF8D6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ARHockeyMalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aidendeloryn.ARHockeyMalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ARHockeyMallet;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DF310F651BC3437100FF8D6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ARHockeyMalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aidendeloryn.ARHockeyMalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ARHockeyMallet;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF310F301BC3437100FF8D6E /* Build configuration list for PBXProject "ARHockeyMallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF310F5B1BC3437100FF8D6E /* Debug */,
+				DF310F5C1BC3437100FF8D6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF310F5D1BC3437100FF8D6E /* Build configuration list for PBXNativeTarget "ARHockeyMallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF310F5E1BC3437100FF8D6E /* Debug */,
+				DF310F5F1BC3437100FF8D6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF310F601BC3437100FF8D6E /* Build configuration list for PBXNativeTarget "ARHockeyMalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF310F611BC3437100FF8D6E /* Debug */,
+				DF310F621BC3437100FF8D6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF310F631BC3437100FF8D6E /* Build configuration list for PBXNativeTarget "ARHockeyMalletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF310F641BC3437100FF8D6E /* Debug */,
+				DF310F651BC3437100FF8D6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF310F2D1BC3437100FF8D6E /* Project object */;
+}
